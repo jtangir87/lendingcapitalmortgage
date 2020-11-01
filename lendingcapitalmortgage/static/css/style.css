@@ -453,7 +453,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.3)
-  ), url("../img/hero-banner.png") center center;
+  ), url("../img/hero-banner.jpeg") center center;
   background-size: cover;
   position: relative;
   margin-bottom: -200px;
@@ -922,11 +922,22 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+#servicesHome {
+  background:linear-gradient(
+    rgba(255, 255, 255, 0.65),
+    rgba(255, 255, 255, 0.65)
+  ), url('../img/suburban-arial.png');
+}
+
 .services .icon-box {
   text-align: center;
   border: 1px solid #d5e1ed;
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8)
+  );
 }
 
 .services .icon-box .icon {
@@ -1001,15 +1012,24 @@ section {
 /*--------------------------------------------------------------
 # Appointments
 --------------------------------------------------------------*/
-.appointment .php-email-form {
+#preApprovalForm {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ), url("../img/pre-approval-form-bg.jpeg") center center;
+    background-size: cover;
+}
+
+
+.pre-approval-form .php-email-form {
   width: 100%;
 }
 
-.appointment .php-email-form .form-group {
+.pre-approval-form .php-email-form .form-group {
   padding-bottom: 8px;
 }
 
-.appointment .php-email-form .validate {
+.pre-approval-form .php-email-form .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -1017,7 +1037,7 @@ section {
   font-size: 13px;
 }
 
-.appointment .php-email-form .error-message {
+.pre-approval-form .php-email-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1026,11 +1046,11 @@ section {
   font-weight: 600;
 }
 
-.appointment .php-email-form .error-message br + br {
+.pre-approval-form .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
-.appointment .php-email-form .sent-message {
+.pre-approval-form .php-email-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1039,14 +1059,14 @@ section {
   font-weight: 600;
 }
 
-.appointment .php-email-form .loading {
+.pre-approval-form .php-email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.appointment .php-email-form .loading:before {
+.pre-approval-form .php-email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1059,26 +1079,26 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.appointment .php-email-form input, .appointment .php-email-form textarea, .appointment .php-email-form select {
+.pre-approval-form .php-email-form input, .pre-approval-form .php-email-form textarea, .pre-approval-form .php-email-form select {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   padding: 10px !important;
 }
 
-.appointment .php-email-form input:focus, .appointment .php-email-form textarea:focus, .appointment .php-email-form select:focus {
+.pre-approval-form .php-email-form input:focus, .pre-approval-form .php-email-form textarea:focus, .pre-approval-form .php-email-form select:focus {
   border-color: #1f6081;
 }
 
-.appointment .php-email-form input, .appointment .php-email-form select {
+.pre-approval-form .php-email-form input, .pre-approval-form .php-email-form select {
   height: 44px;
 }
 
-.appointment .php-email-form textarea {
+.pre-approval-form .php-email-form textarea {
   padding: 10px 12px;
 }
 
-.appointment .php-email-form button[type="submit"] {
+.pre-approval-form .php-email-form button[type="submit"] {
   background: #1f6081;
   border: 0;
   padding: 10px 35px;
@@ -1087,7 +1107,7 @@ section {
   border-radius: 50px;
 }
 
-.appointment .php-email-form button[type="submit"]:hover {
+.pre-approval-form .php-email-form button[type="submit"]:hover {
   background: #1c84e3;
 }
 
@@ -1742,4 +1762,28 @@ section {
   background: #1c84e3;
   color: #fff;
   text-decoration: none;
+}
+
+#mortgageCalc body {
+  background: black!important;
+}
+
+@media (max-width:500.99px) {
+  .parallax {
+    background-position: center;
+  }
+}
+
+@media (min-width:501px) {
+.parallax {
+
+  /* Set a specific height */
+  height: auto;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed!important;
+  background-position: center!important;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
+}
 }
