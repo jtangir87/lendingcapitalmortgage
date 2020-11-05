@@ -66,9 +66,9 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">LCM</a></h1>
+      {% comment %} <h1 class="logo mr-auto"><a href="index.html">LCM</a></h1> {% endcomment %}
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <a href="{% url 'home' %}" class="logo mr-auto"><img src="{% static 'img/lcm-logo.png' %}" alt="lending capital mortgage logo" class="img-fluid"></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -79,6 +79,9 @@
               <li><a href="#">Conventional Lending</a></li>
               <li><a href="#">FHA Lending</a></li>
               <li><a href="#">VA Lending</a></li>
+              <li><a href="#">Non QM Lending</a></li>
+              <li><a href="#">Jumbo Lending</a></li>
+              <li><a href="#">Refinancing</a></li>
             </ul>
           </li>
           <li><a href="#services">Wall of Fame</a></li>
@@ -159,10 +162,7 @@
         
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->

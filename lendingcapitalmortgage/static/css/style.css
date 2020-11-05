@@ -451,9 +451,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 90vh;
   background: linear-gradient(
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.3)
-  ), url("../img/hero-banner.jpeg") center center;
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.3)
+  ), url("../img/hero-banner.jpg") top center;
   background-size: cover;
   position: relative;
   margin-bottom: -200px;
@@ -469,25 +469,27 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 56px;
   text-transform: uppercase;
-  color: #1f6081;
+  /* color: #1f6081; */
+  color:white;
 }
 
 #hero h2 {
   color: #1f6081;
   margin: 10px 0 0 0;
   font-size: 24px;
+  text-align: right
 }
 
 #hero .btn-get-started {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 12px 35px;
+  padding: 15px 35px;
   margin-top: 30px;
-  border-radius: 50px;
+  border-radius: 15px;
   transition: 0.5s;
   color: #fff;
   background: #1f6081;
@@ -531,6 +533,12 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
   }
 }
+
+/* @media (max-width: 500px) {
+  #hero .btn-group {
+    margin-top: 300px;
+  }
+} */
 
 /*--------------------------------------------------------------
 # Sections General
@@ -777,7 +785,7 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about.jpg") center center no-repeat;
+  background: url("../img/modern-kitchen.jpg") center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
@@ -1010,7 +1018,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Appointments
+# Pre-Approval
 --------------------------------------------------------------*/
 #preApprovalForm {
     background: linear-gradient(
@@ -1110,6 +1118,46 @@ section {
 .pre-approval-form .php-email-form button[type="submit"]:hover {
   background: #1c84e3;
 }
+
+/*--------------------------------------------------------------
+# Mortgage Calculator Banner
+--------------------------------------------------------------*/
+#mortgageCalcBanner {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url("../img/calc-banner-bg.jpg") center center;
+  background-size: cover;
+}
+
+#mortgageCalcBanner h3 {
+  color: white;
+  font-weight: 900;
+  font-size: 40px;
+}
+
+#mortgageCalcBanner p {
+  color: white;
+  font-style: italic;
+  font-size: 22px;
+}
+
+.mortgage-calc-banner-btn {
+  background: #1f6081;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.mortgage-calc-banner-btn:hover {
+  background: #166ab5;
+  color: #fff;
+}
+
 
 /*--------------------------------------------------------------
 # Departments
@@ -1787,3 +1835,20 @@ section {
   background-size: cover!important;
 }
 }
+
+.zillow-btn {
+  background: transparent;
+  color:#006aff;
+  font-size: 28px;
+  font-weight: 999;
+}
+
+.zillow-btn img,
+span {
+  vertical-align: middle;
+}
+.zillow-btn:hover {
+  background: #d2cece;
+  border-color: #d2cece;
+  color: #006aff;
+} 
