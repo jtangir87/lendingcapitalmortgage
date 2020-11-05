@@ -1871,3 +1871,25 @@ span {
   border-color: #246E94;
   color:white;
 }
+
+.service-cta {
+  background-color: #1f6081;
+  color: white;
+}
+
+.service-cta .cta-btn {
+  background: white;
+  border-color: white;
+  color: #1f6081;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.service-cta .cta-btn:hover {
+  background-color: #359BCE;
+  border-color: #359BCE;
+  color: black;
+}

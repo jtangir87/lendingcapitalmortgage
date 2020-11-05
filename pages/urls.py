@@ -30,6 +30,11 @@ urlpatterns = [
     path('thank-you', TemplateView.as_view(
         template_name='pages/thank_you.html'), name="thank_you"),
 
+    ## SERVICES ###
+    path('fha-lending', TemplateView.as_view(
+        template_name='pages/fha_lending.html'), name="fha"),
+
+
     path("pre-approval", pre_approval_page, name="pre_approval_form"),
     path("refinance", refinance_page, name="refinance_form"),
 
