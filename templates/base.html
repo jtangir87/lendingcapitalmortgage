@@ -72,8 +72,8 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li {% if request.resolver_match.view_name == 'home' %}class="active"{% endif %}><a href="{% url 'home' %}">Home</a></li>
-          <li {% if request.resolver_match.view_name == 'about' %}class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
           <li class="drop-down"><a href="">Services</a>
             <ul>
               <li><a href="#">Conventional Lending</a></li>
@@ -85,13 +85,13 @@
             </ul>
           </li>
           <li><a href="#services">Wall of Fame</a></li>
-          <li {% if request.resolver_match.view_name == 'mortgage_calc' %}class="active"{% endif %}><a href="{% url 'mortgage_calc' %}">Mortgage Calculator</a></li>         
-          <li {% if request.resolver_match.view_name == 'contact' %}class="active"{% endif %}><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href="{% url 'mortgage_calc' %}">Mortgage Calculator</a></li>         
+          <li><a href="{% url 'contact' %}">Contact</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="#appointment" class="appointment-btn scrollto">Get Pre-Approved</a>
+      <a href="{% url 'pre_approval_form' %}" class="appointment-btn scrollto">Get Pre-Approved</a>
 
     </div>
   </header><!-- End Header -->

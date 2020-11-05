@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Mortgage Calculator | Lending Capital Mortgage
+{% endblock title %}
+
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Form Submitted Successfully</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li>Thank You</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section id="thankYou" class="thank-you">
+      <div class="container">
+        <div class="col-md-6 mx-auto">
+          <h2>Thank You!</h2>
+          <p>Your request has been submitted successfully! One of our experienced mortgage specialists will be in
+          contact with you soon.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+
+{% endblock content %}

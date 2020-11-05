@@ -21,8 +21,8 @@ Lending Capital Mortgage
           <h1>Pennsylvania's Mortgage Specialists</h1>
           {% comment %} <h2>We work for you, not the lenders</h2> {% endcomment %}
           <div class="btn-group flex-wrap">
-                <a href="#about" class="btn-get-started scrollto hero-btn">Purchase</a>
-                <a href="#about" class="btn-get-started scrollto her-btn">Refinance</a>
+                <a href="{% url 'pre_approval_form' %}" class="btn-get-started scrollto hero-btn">Purchase</a>
+                <a href="{% url 'refinance_form' %}" class="btn-get-started scrollto her-btn">Refinance</a>
           </div>
         </div>    
       </div>
@@ -413,11 +413,11 @@ Lending Capital Mortgage
       <div class="container">
 
       <div class="row">
-        <div class="col-lg-8">
-          <h3>Unsure how much you can afford?</h3>
-          <p>Try our mortgage calculator to figure out your estimated monthly payments</p>
+        <div class="col-lg-9 mx-auto">
+          <h3>Curious about your mortgage payment?</h3>
+          <p>Try our mortgage calculator to get your estimated monthly payments</p>
         </div>
-        <div class="col-lg-4 text-center">
+        <div class="col-lg-3 text-center align-self-center">
           <a href="{% url 'mortgage_calc' %}" class="btn btn-lg mortgage-calc-banner-btn">Mortgage Calculator</a>
         </div>
       </div>

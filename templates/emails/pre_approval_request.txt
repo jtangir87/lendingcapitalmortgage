@@ -1,0 +1,9 @@
+NEW PRE-APPROVAL REQUEST FROM WEBSITE
+
+Name: {{first_name}} {{last_name}}
+Email: {{email}}
+Phone: {{phone}}
+
+Credit Score: {{credit_score}}
+Purchase Price: {{purchase_price}}
+Down Payment: {{down_payment}}

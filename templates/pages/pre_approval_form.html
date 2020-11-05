@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+
+{% block title %} Get Pre-Approved | Lending Capital Mortgage
+{% endblock title %}
+
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Get Pre-Approved!</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li>Pre-Approval</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section id="preApproval" class="pre-approval">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Pre-Approval Form</h2>
+          <p>Please fill out this brief form and one of our experienced mortgage experts will get in touch with rate quotes soon!</p>
+        </div>
+
+        <div class="col-lg-8 mx-auto">
+          <form method="POST">
+            {% csrf_token %}
+            {% bootstrap_form_errors form %}
+            <div class="row">
+              <div class="col-md-6">
+                {% bootstrap_field form.first_name %}
+              </div>
+              <div class="col-md-6">
+                {% bootstrap_field form.last_name %}
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                {% bootstrap_field form.email %}
+              </div>
+              <div class="col-md-6">
+                {% bootstrap_field form.phone %}
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                {% bootstrap_field form.credit_score %}
+              </div>
+              <div class="col-md-6">
+                {% bootstrap_field form.purchase_price %}
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                {% bootstrap_field form.down_payment %}
+              </div>
+              <div class="col-md-6 text-center align-self-center">
+                <button type="submit" class="btn submit-btn">Submit</button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+
+{% endblock content %}

@@ -1,0 +1,12 @@
+NEW REFINANCING REQUEST FROM WEBSITE
+
+Name: {{first_name}} {{last_name}}
+Email: {{email}}
+Phone: {{phone}}
+
+Credit Score: {{credit_score}}
+Loan Balance: {{loan_balance}}
+
+Address: 
+{{address}}
+{{city}}, {{state}} {{zip}}
