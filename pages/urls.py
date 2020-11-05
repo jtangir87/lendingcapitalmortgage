@@ -35,6 +35,10 @@ urlpatterns = [
         template_name='pages/fha_lending.html'), name="fha"),
 
 
+    ## LOCAL LANDING ###
+    path('bucks-county-mortgages', TemplateView.as_view(
+        template_name='pages/bucks_county.html'), name="bucks_county"),
+
     path("pre-approval", pre_approval_page, name="pre_approval_form"),
     path("refinance", refinance_page, name="refinance_form"),
 
