@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Services | Lending Capital Mortgage
+{% endblock title %}
+
+{% block meta_tags %}
+  <meta content="Our Services. We work for you, not the lenders" name="description">
+  <meta content="conventional lending, va lending, non qm lending, refinancing, lowest mortgage rates, lowest fees, mortgage options" name="keywords">
+  <link rel="canonical" href="https://lendingcapitalmortgage.com/services=" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://lendingcapitalmortgage.com/services=" />
+	<meta property="og:title" content="Services | Lending Capital Mortgage" />
+	<meta property="og:description" content="Our Services. We work for you, not the lenders" />
+  <meta property="og:image" content="{% static 'img/lcm-og-img.png' %}" />
+{% endblock meta_tags %}
+
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Services</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li>Services</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <!-- ======= Services Section ======= -->
+    {% include 'includes/services_section.html' %}
+    <!-- End Services Section -->
+
+  </main><!-- End #main -->
+
+
+{% endblock content %}

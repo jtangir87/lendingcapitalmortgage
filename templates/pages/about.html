@@ -4,6 +4,17 @@
 {% block title %} About Us | Lending Capital Mortgage
 {% endblock title %}
 
+{% block meta_tags %}
+  <meta content="About Lending Capital Mortgage. We work for you, not the lenders. Most options, lowest rates, lowest fees" name="description">
+  <meta content="lowest mortgage rates, lowest fees, mortgage options" name="keywords">
+  <link rel="canonical" href="https://lendingcapitalmortgage.com/about" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://lendingcapitalmortgage.com/about" />
+	<meta property="og:title" content="About Us | Lending Capital Mortgage" />
+	<meta property="og:description" content="About Lending Capital Mortgage. We work for you, not the lenders. Most options, lowest rates, lowest fees" />
+  <meta property="og:image" content="{% static 'img/lcm-og-img.png' %}" />
+{% endblock meta_tags %}
+
 {% block content %}
 
   <main id="main">
@@ -52,23 +63,18 @@
 
         <div class="row">
 
-          <div class="col-lg-6">
+          <div class="col-lg-6 mx-auto">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="{% static 'img/doctors/doctors-1.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{% static 'img/kevin-stegena.jpg' %}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Medical Officer</span>
+                <h4>Kevin Stegena</h4>
+                <span>Chief Executive Officer</span>
                 <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
               </div>
             </div>
           </div>
-
+        </div>
+        <div class="row">
           <div class="col-lg-6 mt-4 mt-lg-0">
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt=""></div>
@@ -103,22 +109,6 @@
             </div>
           </div>
 
-          <div class="col-lg-6 mt-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/doctors/doctors-4.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Neurosurgeon</span>
-                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div>
-              </div>
-            </div>
-          </div>
 
         </div>
 

@@ -474,10 +474,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h2 {
-  color: #1f6081;
+  color:white;
   margin: 10px 0 0 0;
   font-size: 24px;
-  text-align: right
 }
 
 #hero .btn-get-started {
@@ -708,6 +707,7 @@ section {
 .why-us .icon-boxes .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
+  color: #1f6081;
   margin: 0 0 30px 0;
 }
 
@@ -1013,7 +1013,7 @@ section {
   background: #3291e6;
 }
 
-.services .icon-box:hover h4 a, .services .icon-box:hover p {
+.services .icon-box:hover h4, .services .icon-box:hover p {
   color: #fff;
 }
 

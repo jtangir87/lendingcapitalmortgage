@@ -3,8 +3,9 @@ from django.template.loader import get_template
 from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.views.generic import FormView
 
-from .forms import PreApprovalForm, RefinanceForm
+from .forms import PreApprovalForm, RefinanceForm, ContactForm
 
 # Create your views here.
 
@@ -96,3 +97,27 @@ def refinance_page(request):
         context = {"form": form}
 
     return render(request, "pages/refinance_form.html", context)
+
+
+class ContactPage(FormView):
+    form_class = ContactForm
+    template_name = "pages/contact.html"
+    success_url = "/thank-you"
+
+    def form_valid(self, form):
+        template = get_template("emails/contact_us.txt")
+        context = {
+            "name": form.cleaned_data.get('name'),
+            "email": form.cleaned_data.get('email'),
+            "phone": form.cleaned_data.get('phone'),
+            "message": form.cleaned_data.get('message'),
+        }
+        content = template.render(context)
+        send_mail(
+            "LCM CONTACT US",
+            content,
+            "LCM WEBSITE <donotreply@philadelphiamedialab.com>",
+            ["kstegena@outlook.com"],
+            fail_silently=False,
+        )
+        return super(ContactPage, self).form_valid(form)

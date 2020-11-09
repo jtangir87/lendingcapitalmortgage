@@ -11,14 +11,7 @@
 
   {% block meta_tags %}
   {% endblock meta_tags %}  
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-  <link rel="canonical" href="" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="" />
-	<meta property="og:title" content="Lending Capital Mortgage LLC" />
-	<meta property="og:description" content="Pennsylvania's mortgage specialists" />
-  <meta property="og:image" content="{% static 'img/lcm-og-img.png' %}" />
+
   <!-- Favicons -->
   <link href="{% static 'img/favicon.png' %}" rel="icon">
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
@@ -74,14 +67,14 @@
         <ul>
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
-          <li class="drop-down"><a href="">Services</a>
+          <li class="drop-down"><a href="{% url 'services' %}">Services</a>
             <ul>
-              <li><a href="#">Conventional Lending</a></li>
+              <li><a href="{% url 'conventional' %}">Conventional Lending</a></li>
               <li><a href="{% url 'fha' %}">FHA Lending</a></li>
-              <li><a href="#">VA Lending</a></li>
-              <li><a href="#">Non QM Lending</a></li>
-              <li><a href="#">Jumbo Lending</a></li>
-              <li><a href="#">Refinancing</a></li>
+              <li><a href="{% url 'va' %}">VA Lending</a></li>
+              <li><a href="{% url 'non-qm' %}">Non QM Lending</a></li>
+              <li><a href="{% url 'jumbo' %}">Jumbo Lending</a></li>
+              <li><a href="{% url 'refinancing' %}">Refinancing</a></li>
             </ul>
           </li>
           <li><a href="#services">Wall of Fame</a></li>
@@ -121,11 +114,11 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Mortgage Calculator</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Get Pre-Approved</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'mortgage_calc' %}">Mortgage Calculator</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'pre_approval_form' %}">Get Pre-Approved</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy Policy</a></li>
             </ul>
           </div>
@@ -157,12 +150,9 @@
 
       <div class="mr-md-auto text-center text-md-left">
         <div class="copyright">
-          &copy; Copyright <strong><span>Lending Capital Mortgage LLC, NMLS #1558801</span></strong>. All Rights Reserved<br><small><a href="https://www.philadelphiamedialab.com/">Website Design & Development</a> by Philadelphia Media Lab</small>
+          &copy; Copyright 2020 <strong><span>Lending Capital Mortgage LLC, NMLS #1558801</span></strong>. All Rights Reserved | <a href="https://www.philadelphiamedialab.com/">Website Design & Development</a> by Philadelphia Media Lab
         </div>
         
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->

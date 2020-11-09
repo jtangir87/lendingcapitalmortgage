@@ -7,6 +7,14 @@ Lending Capital Mortgage
 {% endblock title %}
 
 {% block meta_tags %}
+  <meta content="Pennsylvania's mortage specialists. We work for you, not the lenders. Most options, lowest rates, lowest fees" name="description">
+  <meta content="" name="keywords">
+  <link rel="canonical" href="https://lendingcapitalmortgage.com" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://lendingcapitalmortgage.com" />
+	<meta property="og:title" content="Lending Capital Mortgage LLC" />
+	<meta property="og:description" content="Pennsylvania's mortgage specialists" />
+  <meta property="og:image" content="{% static 'img/lcm-og-img.png' %}" />
 {% endblock meta_tags %}
 
 {% block content %}
@@ -19,7 +27,7 @@ Lending Capital Mortgage
         </div>
         <div class="col-lg-7">
           <h1>Pennsylvania's Mortgage Specialists</h1>
-          {% comment %} <h2>We work for you, not the lenders</h2> {% endcomment %}
+          <h2>We work for you, not the lenders</h2>
           <div class="btn-group flex-wrap">
                 <a href="{% url 'pre_approval_form' %}" class="btn-get-started scrollto hero-btn">Purchase</a>
                 <a href="{% url 'refinance_form' %}" class="btn-get-started scrollto her-btn">Refinance</a>
@@ -54,22 +62,25 @@ Lending Capital Mortgage
               <div class="row">
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
-                    <i class="fas fa-home"></i>
-                    <h4>Purchases</h4>
+                    
+                    <h4>Most Options</h4>
+                    <i class="fas fa-poll-h"></i>
                     <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
-                    <i class="fas fa-chart-pie"></i>
-                    <h4>Refinancing</h4>
+                    
+                    <h4>Lowest Rates</h4>
+                    <i class="fas fa-percent"></i>
                     <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
-                    <i class="fas fa-percent"></i>
-                    <h4>Lowest Rates</h4>
+                    
+                    <h4>Lowest Fees</h4>
+                    <i class="fas fa-file-download"></i>
                     <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
                   </div>
                 </div>
@@ -119,67 +130,8 @@ Lending Capital Mortgage
     </section><!-- End About Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="servicesHome" class="services parallax">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
-              <h4><a href="">Conventional Lending</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="icon-box">
-              <div class="icon"><a href="{% url 'fha' %}"><i class="fas fa-house-user"></i></a></div>
-              <h4><a href="{% url 'fha' %}">FHA Lending</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-flag-usa"></i></div>
-              <h4><a href="">VA Lending</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-balance-scale-left"></i></div>
-              <h4><a href="">Refinancing</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-piggy-bank"></i></div>
-              <h4><a href="">Non QM Lending</a></h4>
-              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-            <div class="icon-box">
-              <div class="icon"><i class="fas fa-search-dollar"></i></div>
-              <h4><a href="">Jumbo Lending</a></h4>
-              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
+    {% include 'includes/services_section.html' %}
+    <!-- End Services Section -->
 
 
 
@@ -197,9 +149,6 @@ Lending Capital Mortgage
             <ul class="nav nav-tabs flex-column">
               <li class="nav-item">
                 <a class="nav-link active show" data-toggle="tab" href="#tab-1">Pre-Approval</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tab-2">Application</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" data-toggle="tab" href="#tab-3">Underwriting</a>
@@ -223,18 +172,6 @@ Lending Capital Mortgage
                   </div>
                   <div class="col-lg-4 text-center order-1 order-lg-2">
                     <img src="{% static 'img/process-pre-approval.jpeg' %}" alt="" class="img-fluid">
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane" id="tab-2">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Application</h3>
-                    <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="{% static 'img/process-application.jpeg' %}" alt="" class="img-fluid">
                   </div>
                 </div>
               </div>

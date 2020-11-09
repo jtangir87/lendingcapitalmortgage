@@ -17,23 +17,33 @@ Including another URLconf
 from django.urls import path
 from django.views.generic import TemplateView
 
-from .views import pre_approval_page, refinance_page
+from .views import pre_approval_page, refinance_page, ContactPage
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='pages/home.html'), name="home"),
     path('about', TemplateView.as_view(
         template_name='pages/about.html'), name="about"),
-    path('contact', TemplateView.as_view(
-        template_name='pages/contact.html'), name="contact"),
+    path('services', TemplateView.as_view(
+        template_name='pages/services.html'), name="services"),
+    path('contact', ContactPage.as_view(), name="contact"),
     path('mortgage-calculator', TemplateView.as_view(
         template_name='pages/mortgage_calc.html'), name="mortgage_calc"),
     path('thank-you', TemplateView.as_view(
         template_name='pages/thank_you.html'), name="thank_you"),
 
     ## SERVICES ###
-    path('fha-lending', TemplateView.as_view(
+    path('services/fha-lending', TemplateView.as_view(
         template_name='pages/fha_lending.html'), name="fha"),
-
+    path('services/conventional-lending', TemplateView.as_view(
+        template_name='pages/conventional_lending.html'), name="conventional"),
+    path('services/va-lending', TemplateView.as_view(
+        template_name='pages/va_lending.html'), name="va"),
+    path('services/non-qm-lending', TemplateView.as_view(
+        template_name='pages/non_qm_lending.html'), name="non-qm"),
+    path('services/jumbo-lending', TemplateView.as_view(
+        template_name='pages/jumbo_lending.html'), name="jumbo"),
+    path('services/refinancing', TemplateView.as_view(
+        template_name='pages/refinancing.html'), name="refinancing"),
 
     ## LOCAL LANDING ###
     path('bucks-county-mortgages', TemplateView.as_view(
