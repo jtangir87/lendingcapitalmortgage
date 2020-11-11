@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Privacy Policy | Lending Capital Mortgage
+{% endblock title %}
+
+{% block meta_tags %}
+  <meta content="Lending Capital Mortgage Privacy Policy" name="description">
+  <meta content="jumbo mortgage, lowest mortgage rates, lowest fees, mortgage options" name="keywords">
+  <link rel="canonical" href="https://lendingcapitalmortgage.com/privacy" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://lendingcapitalmortgage.com/privacy" />
+	<meta property="og:title" content="Privacy Policy | Lending Capital Mortgage" />
+	<meta property="og:description" content="Lending Capital Mortgage Privacy Policy" />
+  <meta property="og:image" content="{% static 'img/lcm-og-img.png' %}" />
+{% endblock meta_tags %}
+
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Privacy Policy</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li>Privacy Policy</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section id="servicePage" class="service-page">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Privacy Policy</h2>
+        </div>
+
+          
+        <p>This privacy policy governs the use of information by Lending Capital Mortgage, LLC as collected on the website. The example of the company's web-based privacy notice applies to information collected by the company's web site.</p>
+
+        <p>Lending Capital Mortgage, LLC is committed to security and privacy of the personal information. This privacy policy applies to that information that you submit via this website, and that Lending Capital Mortgage, LLC receives via this website. It does not apply to the practices of businesses and people with which we have no affiliation or control.}</p>
+
+        <p>While using this site, you may click a link which brings you to a site not controlled nor owned by Lending Capital Mortgage, LLC In this case, you should review the policies of that site. This Lending Capital Mortgage, LLC policy should not be taken to apply outside of the website</p>
+        <p>Information Collection, Use, and Sharing</p>
+        <p>Lending Capital Mortgage, LLC collects personal information ("Information") from you through e-mail, forms, and other methods located on our website. This Information is collected only if you choose to submit it, and in submitting it you agree to have the Information handled in accord with this policy. This Information may include names, social security numbers, e-mail addresses, phone numbers, home data including pricing and outstanding loans, and other data as requested or provided.</p>
+        <p>Lending Capital Mortgage, LLC takes the privacy of your information seriously. We will share your information only among our company and its affiliates and/or commonly owned companies, and may do so for any business reason. We do not sell or transfer your information to any unrelated third party, except as provided for herein.</p>
+        <p>Lending Capital Mortgage, LLC will use your Information in order to fulfill your request. As such, information may be shared as necessary with third parties including:
+          <ul>
+            <li>Appraisal companies</li>
+            <li>Credit agencies</li>
+            <li>Mortgage insurance companies</li>
+            <li>Title and escrow companies or Hazard Insurance Companies</li>
+            <li>Lenders</li>
+          </ul>
+        </p>
+
+        <p>Lending Capital Mortgage, LLC will not otherwise share the Information which you have provided.</p>
+        <p>Your Access to and Control of Information</p>
+        <p>You may opt out of any future contacts from us, or change the information we have on file for you, at any time. You can do the following at any time by contacting us via the mailing address, email address or phone number given on our website:
+          <ul>
+            <li>See what data we have about you, if any.</li>
+            <li>Change/correct any data we have about you.</li>
+            <li>Have us delete any data we have about you.</li>
+            <li>Express any concern you have about our use of your data or its security</li>
+          </ul>          
+        </p>
+        <p>We take precautions to protect your information.</p>
+        <p>When you submit sensitive information via the website, your information is protected both online and offline. Wherever we collect sensitive information (such as a social security number), that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a closed lock icon at the bottom of your web browser, or looking for "https" at the beginning of the address of the web page. While we use encryption to protect sensitive information transmitted online, we also protect your information offline. The computers and servers in which we store personally identifiable information are kept in a secure environment.</p>
+        <p>If you feel that we are not abiding by this privacy policy, you should contact us immediately at the address, telephone number or email address below.</p>
+        <p>Browsing the Website</p>
+        <p>As you browse the Website, we may record certain data about your visit. This data does not include any personally identifiable information, and cannot be traced back to you unless you choose to identify yourself and/or your access history. Data collected may include your IP address, operating system, browser type, time, date, and page visits, where you came from, and other such non-personal information. We may also place "cookies" on your computer. These help us in tracking your use of the Website, and do not collect any personally identifiable data about you. If you choose to reject these cookies, certain functions of the Website may be unable to operate.</p>
+        <p>Legal Requirements</p>
+        <p>Lending Capital Mortgage, LLC may disclose any and all information as required by law or legal action. Lending Capital Mortgage, LLC may also do so in the good-faith belief that disclosure is necessary or required by law or legal process.</p>
+        <p>This Policy May Change</p>
+        <p>This privacy policy may change at any time, for any reason, and without notice. It is your responsibility to check this policy often to ensure that you are aware of our latest policies.</p>
+        <p>Lending Capital Mortgage, LLC 12 Penns Trail, Newtown, Pennsylvania 18940 (215) 776-8980</p>
+
+      </div>
+    </section>
+
+    <section class="service-cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Start the journey toward your new home today!</h3>
+          </div>
+          <div class="col-md-4">
+            <a href="{% url 'pre_approval_form' %}" class="btn cta-btn">Get Pre-Approved</a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+
+
+{% endblock content %}

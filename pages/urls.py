@@ -30,6 +30,8 @@ urlpatterns = [
         template_name='pages/mortgage_calc.html'), name="mortgage_calc"),
     path('thank-you', TemplateView.as_view(
         template_name='pages/thank_you.html'), name="thank_you"),
+    path('privacy', TemplateView.as_view(
+        template_name='pages/privacy_policy.html'), name="privacy_policy"),
 
     ## SERVICES ###
     path('services/fha-lending', TemplateView.as_view(
@@ -48,7 +50,12 @@ urlpatterns = [
     ## LOCAL LANDING ###
     path('bucks-county-mortgages', TemplateView.as_view(
         template_name='pages/bucks_county.html'), name="bucks_county"),
+    path('montgomery-county-mortgages', TemplateView.as_view(
+        template_name='pages/montgomery_county.html'), name="montgomery_county"),
+    path('philadelphia-county-mortgages', TemplateView.as_view(
+        template_name='pages/philadelphia_county.html'), name="philadelphia_county"),
 
+    ## FORMS ##
     path("pre-approval", pre_approval_page, name="pre_approval_form"),
     path("refinance", refinance_page, name="refinance_form"),
 
