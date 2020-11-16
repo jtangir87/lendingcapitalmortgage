@@ -25,6 +25,8 @@ urlpatterns = [
         template_name='pages/about.html'), name="about"),
     path('services', TemplateView.as_view(
         template_name='pages/services.html'), name="services"),
+    path('wall-of-fame', TemplateView.as_view(
+        template_name='pages/wall_of_fame.html'), name="wall_of_fame"),
     path('contact', ContactPage.as_view(), name="contact"),
     path('mortgage-calculator', TemplateView.as_view(
         template_name='pages/mortgage_calc.html'), name="mortgage_calc"),
@@ -46,6 +48,11 @@ urlpatterns = [
         template_name='pages/jumbo_lending.html'), name="jumbo"),
     path('services/refinancing', TemplateView.as_view(
         template_name='pages/refinancing.html'), name="refinancing"),
+    path('services/dpa-lending', TemplateView.as_view(
+        template_name='pages/dpa_lending.html'), name="dpa"),
+    path('services/usda-lending', TemplateView.as_view(
+        template_name='pages/usda_lending.html'), name="usda"),
+
 
     ## LOCAL LANDING ###
     path('bucks-county-mortgages', TemplateView.as_view(

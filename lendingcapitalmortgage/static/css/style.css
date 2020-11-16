@@ -784,13 +784,13 @@ section {
   font-size: 14px;
 }
 
-.about .video-box {
+.video-box {
   background: url("../img/modern-kitchen.jpg") center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
 
-.about .play-btn {
+.play-btn {
   width: 94px;
   height: 94px;
   background: radial-gradient(#1f6081 50%, rgba(25, 119, 204, 0.4) 52%);
@@ -802,7 +802,7 @@ section {
   overflow: hidden;
 }
 
-.about .play-btn::after {
+.play-btn::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -817,7 +817,7 @@ section {
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-.about .play-btn::before {
+.play-btn::before {
   content: '';
   position: absolute;
   width: 120px;
@@ -840,12 +840,12 @@ section {
   background: rgba(198, 16, 0, 0);
 }
 
-.about .play-btn:hover::after {
+.play-btn:hover::after {
   border-left: 15px solid #1f6081;
   transform: scale(20);
 }
 
-.about .play-btn:hover::before {
+.play-btn:hover::before {
   content: '';
   position: absolute;
   left: 50%;
@@ -939,6 +939,7 @@ section {
 
 .services .icon-box {
   text-align: center;
+  min-height: 409px;
   border: 1px solid #d5e1ed;
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
@@ -1505,6 +1506,9 @@ section {
 
 .gallery .gallery-item img {
   transition: all ease-in-out 0.4s;
+  max-height: 230px;
+  width: 100%;
+
 }
 
 .gallery .gallery-item:hover img {
@@ -1892,4 +1896,9 @@ span {
   background-color: #359BCE;
   border-color: #359BCE;
   color: black;
+}
+
+.process-video-box {
+  background: url("../img/modern-kitchen.jpg") center center no-repeat;
+  background-size: cover;
 }

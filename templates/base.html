@@ -67,17 +67,19 @@
         <ul>
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
-          <li class="drop-down"><a href="{% url 'services' %}">Services</a>
+          <li class="drop-down"><a href="{% url 'services' %}">Loan Products</a>
             <ul>
               <li><a href="{% url 'conventional' %}">Conventional Lending</a></li>
               <li><a href="{% url 'fha' %}">FHA Lending</a></li>
               <li><a href="{% url 'va' %}">VA Lending</a></li>
               <li><a href="{% url 'non-qm' %}">Non QM Lending</a></li>
               <li><a href="{% url 'jumbo' %}">Jumbo Lending</a></li>
+              <li><a href="{% url 'usda' %}">USDA Lending</a></li>
+              <li><a href="{% url 'dpa' %}">DPA Programs</a></li>
               <li><a href="{% url 'refinancing' %}">Refinancing</a></li>
             </ul>
           </li>
-          <li><a href="#services">Wall of Fame</a></li>
+          <li><a href="{% url 'wall_of_fame' %}">Wall of Fame Closings</a></li>
           <li><a href="{% url 'mortgage_calc' %}">Mortgage Calculator</a></li>         
           <li><a href="{% url 'contact' %}">Contact</a></li>
 
@@ -116,7 +118,7 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'home' %}">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'about' %}">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'services' %}">Loan Products</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'mortgage_calc' %}">Mortgage Calculator</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'pre_approval_form' %}">Get Pre-Approved</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="{% url 'privacy_policy' %}">Privacy Policy</a></li>

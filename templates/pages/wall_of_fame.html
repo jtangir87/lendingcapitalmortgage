@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Wall of Fame | Lending Capital Mortgage
+{% endblock title %}
+
+{% block meta_tags %}
+  <meta content="lowest mortgage rates, lowest fees, mortgage options" name="keywords">
+  <link rel="canonical" href="https://lendingcapitalmortgage.com/wall-of-fame" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://lendingcapitalmortgage.com/wall-of-fame" />
+	<meta property="og:title" content="Wall of Fame | Lending Capital Mortgage" />
+	<meta property="og:description" content="Understanding non qm mortage loans. We work for you, not the lenders" />
+  <meta property="og:image" content="{% static 'img/lcm-og-img.png' %}" />
+{% endblock meta_tags %}
+
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Wall of Fame Closings</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li>Wall of Fame Closings</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    {% include 'includes/wall_of_fame_section.html' %}
+
+    <section class="service-cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Start the journey toward your new home today!</h3>
+          </div>
+          <div class="col-md-4">
+            <a href="{% url 'pre_approval_form' %}" class="btn cta-btn">Get Pre-Approved</a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+
+
+{% endblock content %}
