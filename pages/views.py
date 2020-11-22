@@ -121,3 +121,19 @@ class ContactPage(FormView):
             fail_silently=False,
         )
         return super(ContactPage, self).form_valid(form)
+
+
+def newsletter_signup(request):
+    if request.method == "POST":
+        email = request.POST.get('email')
+        template = get_template("emails/newsletter_signup.txt")
+
+        content = template.render({"email": email})
+        send_mail(
+            "LCM NEWSLETTER SUBSCRIBE",
+            content,
+            "LCM WEBSITE <donotreply@philadelphiamedialab.com>",
+            ["kstegena@outlook.com"],
+            fail_silently=False,
+        )
+        return HttpResponseRedirect(reverse("thank_you"))

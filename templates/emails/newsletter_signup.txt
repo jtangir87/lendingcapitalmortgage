@@ -1,0 +1,4 @@
+NEW SIGNUP FOR NEWSLETTER
+
+
+Email: {{email}}

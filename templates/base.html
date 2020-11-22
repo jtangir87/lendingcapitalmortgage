@@ -45,13 +45,13 @@
         <i class="icofont-phone"></i> <a href="tel:2157768980">(215)776-8980</a>
         <i class="icofont-google-map"></i> 12 Penns Trail, Newtown, PA 18940
       </div>
-      {% comment %} <div class="social-links">
+      <!-- <div class="social-links">
         <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
         <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
         <a href="#" class="skype"><i class="icofont-skype"></i></a>
         <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
-      </div> {% endcomment %}
+      </div> -->
     </div>
   </div>
 
@@ -59,8 +59,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      {% comment %} <h1 class="logo mr-auto"><a href="index.html">LCM</a></h1> {% endcomment %}
-      <!-- Uncomment below if you prefer to use an image logo -->
+
       <a href="{% url 'home' %}" class="logo mr-auto"><img src="{% static 'img/lcm-logo.png' %}" alt="lending capital mortgage logo" class="img-fluid"></a>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -138,9 +137,10 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+            <p>Don't miss our latest news and updates!</p>
+            <form action="{% url 'newsletter_signup' %}" method="post">
+              {% csrf_token %}
+              <input type="email" id="id_email" name="email"><input type="submit" value="Subscribe">
             </form>
           </div>
 
