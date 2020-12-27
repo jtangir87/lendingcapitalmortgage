@@ -10,6 +10,27 @@ from .forms import PreApprovalForm, RefinanceForm, ContactForm
 # Create your views here.
 
 
+def home_cta(request):
+    if request.method == "POST":
+        ### SEND EMAIL TO LCM ###
+        template = get_template("emails/pre_approval_request.txt")
+        context = {
+            "first_name": request.POST.get('name'),
+            "email": request.POST.get('email'),
+            "phone": request.POST.get('phone'),
+        }
+        content = template.render(context)
+        send_mail(
+            "New Pre-Approval Request",
+            content,
+            "LCM WEBSITE <donotreply@philadelphiamedialab.com>",
+            ["kstegena@outlook.com"],
+            fail_silently=False,
+        )
+
+        return HttpResponseRedirect(reverse("thank_you"))
+
+
 def pre_approval_page(request):
     if request.method == "POST":
         form = PreApprovalForm(request.POST or None)

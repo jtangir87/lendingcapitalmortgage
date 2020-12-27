@@ -33,7 +33,7 @@
         </div>
 
         <div class="col-lg-8 mx-auto">
-          <form method="POST">
+          <form method="POST" id="refiForm">
             {% csrf_token %}
             {% bootstrap_form_errors form %}
             <div class="row">
@@ -108,7 +108,7 @@
  <script src="https://www.google.com/recaptcha/api.js"></script>
   <script>
    function onSubmit(token) {
-     document.getElementById("contactForm").submit();
+     document.getElementById("refiForm").submit();
    }
  </script>
 {% endblock footscript %}

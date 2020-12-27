@@ -17,7 +17,7 @@ Including another URLconf
 from django.urls import path
 from django.views.generic import TemplateView
 
-from .views import newsletter_signup, pre_approval_page, refinance_page, ContactPage
+from .views import newsletter_signup, pre_approval_page, refinance_page, ContactPage, home_cta
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='pages/home.html'), name="home"),
@@ -63,6 +63,7 @@ urlpatterns = [
         template_name='pages/philadelphia_county.html'), name="philadelphia_county"),
 
     ## FORMS ##
+    path("get-preapproved", home_cta, name="home_cta"),
     path("pre-approval", pre_approval_page, name="pre_approval_form"),
     path("refinance", refinance_page, name="refinance_form"),
     path("newsletter", newsletter_signup, name="newsletter_signup"),

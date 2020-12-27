@@ -147,18 +147,19 @@ Lending Capital Mortgage
           <p>One of our experienced agents will contact you to get your pre-approval started within 1 business day!</p>
         </div>
 
-        <form action="forms/appointment.php" method="post" role="form" class="php-email-form">
+        <form action="{% url 'home_cta' %}" method="post" role="form" class="php-email-form" id="homeCTA">
+          {% csrf_token %}
           <div class="form-row">
             <div class="col-md-4 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <input type="text" name="name" class="form-control" id="id_name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+              <input type="email" class="form-control" name="email" id="id_email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
               <div class="validate"></div>
             </div>
             <div class="col-md-4 form-group">
-              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <input type="tel" class="form-control" name="phone" id="id_phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
               <div class="validate"></div>
             </div>
           </div>
@@ -233,7 +234,7 @@ Lending Capital Mortgage
  <script src="https://www.google.com/recaptcha/api.js"></script>
   <script>
    function onSubmit(token) {
-     document.getElementById("contactForm").submit();
+     document.getElementById("homeCTA").submit();
    }
  </script>
 {% endblock footscript %}
