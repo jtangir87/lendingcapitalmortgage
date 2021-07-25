@@ -10,6 +10,7 @@ class PreApprovalForm(forms.Form):
     purchase_price = forms.IntegerField(label="Purchase Price", required=False)
     down_payment = forms.IntegerField(
         label="Down Payment Amount", required=False)
+    address_hp = forms.CharField(max_length=50, required=False)
 
 
 class RefinanceForm(forms.Form):
@@ -23,6 +24,7 @@ class RefinanceForm(forms.Form):
     city = forms.CharField(max_length=100, required=False)
     state = forms.CharField(max_length=25, required=False)
     zip_code = forms.CharField(max_length=6, required=False)
+    address_hp = forms.CharField(max_length=50, required=False)
 
 
 class ContactForm(forms.Form):
@@ -30,3 +32,4 @@ class ContactForm(forms.Form):
     email = forms.EmailField()
     phone = forms.CharField(max_length=15)
     message = forms.CharField(widget=forms.Textarea)
+    address_hp = forms.CharField(max_length=50, required=False)

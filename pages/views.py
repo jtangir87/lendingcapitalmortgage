@@ -35,28 +35,31 @@ def pre_approval_page(request):
     if request.method == "POST":
         form = PreApprovalForm(request.POST or None)
         if form.is_valid():
+            honeypot = form.cleaned_data.get('address_hp')
+            if not honeypot:
+                ### SEND EMAIL TO LCM ###
+                template = get_template("emails/pre_approval_request.txt")
+                context = {
+                    "first_name": form.cleaned_data.get('first_name'),
+                    "last_name": form.cleaned_data.get('last_name'),
+                    "email": form.cleaned_data.get('email'),
+                    "phone": form.cleaned_data.get('phone'),
+                    "credit_score": form.cleaned_data.get('credit_score'),
+                    "purchase_price": form.cleaned_data.get('purchase_price'),
+                    "down_payment": form.cleaned_data.get('down_payment'),
+                }
+                content = template.render(context)
+                send_mail(
+                    "New Pre-Approval Request",
+                    content,
+                    "LCM WEBSITE <donotreply@philadelphiamedialab.com>",
+                    ["kstegena@outlook.com"],
+                    fail_silently=False,
+                )
 
-            ### SEND EMAIL TO LCM ###
-            template = get_template("emails/pre_approval_request.txt")
-            context = {
-                "first_name": form.cleaned_data.get('first_name'),
-                "last_name": form.cleaned_data.get('last_name'),
-                "email": form.cleaned_data.get('email'),
-                "phone": form.cleaned_data.get('phone'),
-                "credit_score": form.cleaned_data.get('credit_score'),
-                "purchase_price": form.cleaned_data.get('purchase_price'),
-                "down_payment": form.cleaned_data.get('down_payment'),
-            }
-            content = template.render(context)
-            send_mail(
-                "New Pre-Approval Request",
-                content,
-                "LCM WEBSITE <donotreply@philadelphiamedialab.com>",
-                ["kstegena@outlook.com"],
-                fail_silently=False,
-            )
-
-            return HttpResponseRedirect(reverse("thank_you"))
+                return HttpResponseRedirect(reverse("thank_you"))
+            else:
+                return HttpResponseRedirect("https://myfakewebsite.com/")
 
         else:
             errors = form.errors
@@ -78,31 +81,34 @@ def refinance_page(request):
     if request.method == "POST":
         form = RefinanceForm(request.POST or None)
         if form.is_valid():
+            honeypot = form.cleaned_data.get('address_hp')
+            if not honeypot:
+                ### SEND EMAIL TO LCM ###
+                template = get_template("emails/refinance_request.txt")
+                context = {
+                    "first_name": form.cleaned_data.get('first_name'),
+                    "last_name": form.cleaned_data.get('last_name'),
+                    "email": form.cleaned_data.get('email'),
+                    "phone": form.cleaned_data.get('phone'),
+                    "credit_score": form.cleaned_data.get('credit_score'),
+                    "loan_balance": form.cleaned_data.get('loan_balance'),
+                    "address": form.cleaned_data.get('address'),
+                    "city": form.cleaned_data.get('city'),
+                    "state": form.cleaned_data.get('state'),
+                    "zip_code": form.cleaned_data.get('zip_code'),
+                }
+                content = template.render(context)
+                send_mail(
+                    "New Refinance Request",
+                    content,
+                    "LCM WEBSITE <donotreply@philadelphiamedialab.com>",
+                    ["kstegena@outlook.com"],
+                    fail_silently=False,
+                )
 
-            ### SEND EMAIL TO LCM ###
-            template = get_template("emails/refinance_request.txt")
-            context = {
-                "first_name": form.cleaned_data.get('first_name'),
-                "last_name": form.cleaned_data.get('last_name'),
-                "email": form.cleaned_data.get('email'),
-                "phone": form.cleaned_data.get('phone'),
-                "credit_score": form.cleaned_data.get('credit_score'),
-                "loan_balance": form.cleaned_data.get('loan_balance'),
-                "address": form.cleaned_data.get('address'),
-                "city": form.cleaned_data.get('city'),
-                "state": form.cleaned_data.get('state'),
-                "zip_code": form.cleaned_data.get('zip_code'),
-            }
-            content = template.render(context)
-            send_mail(
-                "New Refinance Request",
-                content,
-                "LCM WEBSITE <donotreply@philadelphiamedialab.com>",
-                ["kstegena@outlook.com"],
-                fail_silently=False,
-            )
-
-            return HttpResponseRedirect(reverse("thank_you"))
+                return HttpResponseRedirect(reverse("thank_you"))
+            else:
+                return HttpResponseRedirect("https://myfakewebsite.com/")
 
         else:
             errors = form.errors
@@ -126,22 +132,26 @@ class ContactPage(FormView):
     success_url = "/thank-you"
 
     def form_valid(self, form):
-        template = get_template("emails/contact_us.txt")
-        context = {
-            "name": form.cleaned_data.get('name'),
-            "email": form.cleaned_data.get('email'),
-            "phone": form.cleaned_data.get('phone'),
-            "message": form.cleaned_data.get('message'),
-        }
-        content = template.render(context)
-        send_mail(
-            "LCM CONTACT US",
-            content,
-            "LCM WEBSITE <donotreply@philadelphiamedialab.com>",
-            ["kstegena@outlook.com"],
-            fail_silently=False,
-        )
-        return super(ContactPage, self).form_valid(form)
+        honeypot = form.cleaned_data.get('address_hp')
+        if not honeypot:
+            template = get_template("emails/contact_us.txt")
+            context = {
+                "name": form.cleaned_data.get('name'),
+                "email": form.cleaned_data.get('email'),
+                "phone": form.cleaned_data.get('phone'),
+                "message": form.cleaned_data.get('message'),
+            }
+            content = template.render(context)
+            send_mail(
+                "LCM CONTACT US",
+                content,
+                "LCM WEBSITE <donotreply@philadelphiamedialab.com>",
+                ["kstegena@outlook.com"],
+                fail_silently=False,
+            )
+            return super(ContactPage, self).form_valid(form)
+        else:
+            return HttpResponseRedirect("https://myfakewebsite.com/")
 
 
 def newsletter_signup(request):
