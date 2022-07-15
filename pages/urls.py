@@ -64,7 +64,7 @@ urlpatterns = [
 
     ## FORMS ##
     path("get-preapproved", home_cta, name="home_cta"),
-    path("pre-approval", pre_approval_page, name="pre_approval_form"),
+    path("pre-qualification", pre_approval_page, name="pre_approval_form"),
     path("refinance", refinance_page, name="refinance_form"),
     path("newsletter", newsletter_signup, name="newsletter_signup"),
 
